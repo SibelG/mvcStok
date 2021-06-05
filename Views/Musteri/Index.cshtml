@@ -1,0 +1,38 @@
+﻿@using mvcStok.Models.Entity
+@model List<tblMusteriler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_mainLayout.cshtml";
+}
+@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+    <p>
+        Aranacak Müşteri Adı:@Html.TextBox("p");
+        <input type="submit"/>
+    </p>
+}
+<table class="table table-bordered">
+    <tr>
+        <th>Müşteri Id</th>
+        <th>Müşteri Adı</th>
+        <th>Müşteri Soyadı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach (var msn in Model)
+        {
+        <tr>
+            <td>@msn.musteriId</td>
+            <td>@msn.musteriAd</td>
+            <td>@msn.musteriSoyad</td>
+            <td><a href="/Musteri/Sil/@msn.musteriId"class="btn btn-info">Sil</a></td>
+            <td><a href="/Musteri/MusteriGetir/@msn.musteriId"class="btn btn-info">Güncelle</a></td>
+            <td>@Html.ActionLink("sil Butonu","Sil",new { id=msn.musteriId},new { @class="btn btn-warning",onclick="return confirm('Gerçekten silmek istediğinize emin misiniz?')"})</td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+<a href="/Musteri/YeniMusteri/" class="btn btn-primary">Yeni Musteri Ekle</a>
+

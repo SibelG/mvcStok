@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="afeb1d87801c498281ca8276b63fc264" Name="Diagram1">
+        <EntityTypeShape EntityType="mvcWebEntities.satis" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mvcWebEntities.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mvcWebEntities.tblKategoriler" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="mvcWebEntities.tblMusteriler" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mvcWebEntities.tblSatislar" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mvcWebEntities.tblUrun" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="mvcWebEntities.FK_satis_tblMusteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="mvcWebEntities.FK_satis_tblUrun" ManuallyRouted="false" />
+        <AssociationConnector Association="mvcWebEntities.FK_tblUrun_tblKategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="mvcWebEntities.FK_tblSatislar_tblMusteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="mvcWebEntities.FK_tblSatislar_tblUrun" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
